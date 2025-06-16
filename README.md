@@ -1,2 +1,0 @@
-# moj-sajt1
-PROBA PROBA PROBA
