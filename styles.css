@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Neue Machina', sans-serif;
-    background: linear-gradient(90deg, rgba(255, 0, 150, 1) 0%, rgba(0, 204, 255, 1) 100%);
+    background: radial-gradient(circle, rgba(20, 20, 50, 1) 0%, rgba(0, 0, 0, 1) 100%);
     color: white;
 }
 
@@ -12,16 +12,33 @@ body {
     justify-content: center;
     height: 100vh;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 50%;
+    z-index: 0;
 }
 
 h1 {
     font-size: 4rem;
     margin: 0;
+    z-index: 1;
 }
 
 .content {
     max-width: 800px;
     padding: 20px;
+    z-index: 1;
 }
 
 p {
@@ -30,7 +47,7 @@ p {
 }
 
 .button {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 255, 0.8);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -38,8 +55,9 @@ p {
     cursor: pointer;
     font-size: 1rem;
     margin-top: 20px;
+    z-index: 1;
 }
 
 .button:hover {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 255, 0.6);
 }
